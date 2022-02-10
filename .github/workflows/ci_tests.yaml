@@ -44,8 +44,7 @@ jobs:
           architecture: ${{ matrix.platform.architecture }}
       - run: |
           python -m pip install --upgrade pip
-          pip install --upgrade -r ci-requirements.txt
-          pip install pytest
+          pip install --upgrade -r dev_requirements/py2-requirements.txt
       - name: run test
         env:
           TOXENV: ${{ matrix.category }}
@@ -126,7 +125,7 @@ jobs:
           python-version: 2.7
       - run: |
           python -m pip install --upgrade pip
-          pip install --upgrade -r ci-requirements.txt
+          pip install --upgrade -r dev_requirements/py2-requirements.txt
       - name: run test
         env:
           TOXENV: ${{ matrix.category }}
