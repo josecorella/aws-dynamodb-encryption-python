@@ -1,2 +1,0 @@
-hypothesis==4.40.0
-tox
